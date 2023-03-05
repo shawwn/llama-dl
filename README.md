@@ -2,7 +2,7 @@
 
 **UPDATE (2:43 AM CST)**: Facebook has closed off this download vector. I'm currently mirroring the model to Cloudflare R2, and I'll update the script to use it right now; I'll keep you updated as I go. Check back in like... an hour?
 
-**UPDATE (3:58 AM CST)**: I've mirrored everything to R2, and updated the script to point to it. Note that the download command has changed (it uses a new version of the bash script) so you'll need to re-copy from this README. The safety guarantees are the same for you in the end, though. Read on.
+**UPDATE (3:58 AM CST)**: I've mirrored everything to R2, and updated the script to point to it. Note that the download command has changed (it uses a new version of the bash script) so you'll need to re-copy from this README. The safety guarantees are the same for you in the end, though, and the bandwidth is still around 36MB/s, which isn't too bad.
 
 This repository contains a high-speed download of LLaMA, Facebook's 65B parameter model that was recently made available via torrent. (Discussion: [Facebook LLAMA is being openly distributed via torrents](https://news.ycombinator.com/item?id=35007978))
 
