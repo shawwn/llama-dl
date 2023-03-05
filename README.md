@@ -43,7 +43,7 @@ Running random bash scripts generally isn't a good idea, but I'll stake my perso
 ## How much space do I need?
 
 219G (235164838073 bytes) total. Here are the sizes of the individual files for reference:
-```
+```sh
 $ findsize
 50      ./tokenizer_checklist.chk
 499723  ./tokenizer.model
