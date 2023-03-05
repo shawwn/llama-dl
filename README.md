@@ -70,10 +70,10 @@ $ findsize
 101     ./7B/params.json
 100     ./7B/checklist.chk
 13476939516     ./7B/consolidated.00.pth
-$ findsize | sumcol 0 | bytes2human
-219G
 $ findsize | sumcol 0
 235164838073
+$ findsize | sumcol 0 | bytes2human
+219G
 ```
 
 (Aside: if `findsize`, `sumcol`, and `bytes2human` seem useful, you can get them at [shawwn/scrap](https://github.com/shawwn/scrap) along with.. uh..
