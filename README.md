@@ -40,6 +40,51 @@ curl -o- https://raw.githubusercontent.com/shawwn/llama-dl/56f50b96072f42fb2520b
 
 Running random bash scripts generally isn't a good idea, but I'll stake my personal reputation on the fact that this link is safe. (It points to a specific SHA-1 hash rather than https://raw.githubusercontent.com/shawwn/llama-dl/main/llama.sh so that it's still safe even in the event that my repo or account got compromised.)
 
+## How much space do I need?
+
+219G (235164838073 bytes) total. Here are the sizes of the individual files for reference:
+```
+$ findsize
+50      ./tokenizer_checklist.chk
+499723  ./tokenizer.model
+101     ./65B/params.json
+478     ./65B/checklist.chk
+16323959449     ./65B/consolidated.07.pth
+16323959449     ./65B/consolidated.03.pth
+16323959449     ./65B/consolidated.01.pth
+16323959449     ./65B/consolidated.05.pth
+16323959449     ./65B/consolidated.02.pth
+16323959449     ./65B/consolidated.06.pth
+16323959449     ./65B/consolidated.04.pth
+16323959449     ./65B/consolidated.00.pth
+101     ./13B/params.json
+154     ./13B/checklist.chk
+13016334699     ./13B/consolidated.01.pth
+13016334699     ./13B/consolidated.00.pth
+101     ./30B/params.json
+262     ./30B/checklist.chk
+16265763099     ./30B/consolidated.03.pth
+16265763099     ./30B/consolidated.01.pth
+16265763099     ./30B/consolidated.02.pth
+16265763099     ./30B/consolidated.00.pth
+101     ./7B/params.json
+100     ./7B/checklist.chk
+13476939516     ./7B/consolidated.00.pth
+$ findsize | sumcol 0 | bytes2human
+219G
+$ findsize | sumcol 0
+235164838073
+```
+
+(Aside: if `findsize`, `sumcol`, and `bytes2human` seem useful, you can get them at [shawwn/scrap](https://github.com/shawwn/scrap) along with.. uh..
+
+```
+$ llbin | nlines
+867
+```
+
+... 867 other bash and python scripts I've written over ~7 years, apparently.)
+
 ## How do I know this is safe?
 
 I ran this:
