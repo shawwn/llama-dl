@@ -23,17 +23,9 @@ real    98m12.980s
 user    8m8.916s
 sys     5m7.259s
 ```
-This works out to an average of 40MB/s (235164838073 bytes in 5892 seconds).
+This works out to 40MB/s (235164838073 bytes in 5892 seconds).
 
 Personally, I just wanted to `curl` the weights instead of dealing with a torrent. The fact that it's several times faster was just a nice bonus.
-
-Here's a funny screenshot from when this repo first went live. I guess I'll keep it here. The script was originally using the leaker's own private download link that Facebook emailed them, which turned out to download at up to 220MB/s:
-
-![image](https://user-images.githubusercontent.com/59632/222940196-e763d8a0-2282-4f78-8bbe-14c559eea90f.png)
-
-I was surprised, to say the least.
-
-Once Facebook figured out what we were up to and shut it off, I mirrored everything to Cloudflare R2. This turned out to be fast, reliable, and almost free. (No egress fees.)
 
 ## Download
 
@@ -58,36 +50,7 @@ Running random bash scripts generally isn't a good idea, but I'll stake my perso
 
 ## How much space do I need?
 
-219G (235164838073 bytes) total. Here are the sizes of the individual files for reference:
-```sh
-./tokenizer_checklist.chk  50
-./tokenizer.model          499723
-./7B/checklist.chk         100
-./7B/consolidated.00.pth   13476939516
-./7B/params.json           101
-./13B/checklist.chk        154
-./13B/consolidated.00.pth  13016334699
-./13B/consolidated.01.pth  13016334699
-./13B/params.json          101
-./30B/checklist.chk        262
-./30B/consolidated.00.pth  16265763099
-./30B/consolidated.01.pth  16265763099
-./30B/consolidated.02.pth  16265763099
-./30B/consolidated.03.pth  16265763099
-./30B/params.json          101
-./65B/checklist.chk        478
-./65B/consolidated.00.pth  16323959449
-./65B/consolidated.01.pth  16323959449
-./65B/consolidated.02.pth  16323959449
-./65B/consolidated.03.pth  16323959449
-./65B/consolidated.04.pth  16323959449
-./65B/consolidated.05.pth  16323959449
-./65B/consolidated.06.pth  16323959449
-./65B/consolidated.07.pth  16323959449
-./65B/params.json          101
----
-total                      235164838073
-```
+219G (235164838073 bytes) total. [Here's a file list](https://gist.github.com/shawwn/bddb2f91aa45fbcdc0dd105d88816e75) with sizes for each.
 
 ## How do I know this is safe?
 
