@@ -44,7 +44,6 @@ Running random bash scripts generally isn't a good idea, but I'll stake my perso
 
 219G (235164838073 bytes) total. Here are the sizes of the individual files for reference:
 ```sh
-$ findsize
 50      ./tokenizer_checklist.chk
 499723  ./tokenizer.model
 101     ./65B/params.json
@@ -70,20 +69,10 @@ $ findsize
 101     ./7B/params.json
 100     ./7B/checklist.chk
 13476939516     ./7B/consolidated.00.pth
-$ findsize | sumcol 0
+
+total:
 235164838073
-$ findsize | sumcol 0 | bytes2human
-219G
 ```
-
-(Aside: if `findsize`, `sumcol`, and `bytes2human` seem useful, you can get them at [shawwn/scrap](https://github.com/shawwn/scrap) along with.. uh..
-
-```
-$ llbin | nlines
-867
-```
-
-... 867 other bash and python scripts I've written over ~7 years, apparently.)
 
 ## How do I know this is safe?
 
