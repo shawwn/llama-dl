@@ -21,9 +21,20 @@ sys     2m30.847s
 
 To download all model weights, `cd` into the directory you want them, then run this:
 
+Linux:
+
 ```sh
 curl -o- https://raw.githubusercontent.com/shawwn/llama-dl/56f50b96072f42fb2520b1ad5a1d6ef30351f23c/llama.sh | bash
 ```
+
+Mac:
+
+```sh
+brew install bash
+curl -o- https://raw.githubusercontent.com/shawwn/llama-dl/56f50b96072f42fb2520b1ad5a1d6ef30351f23c/llama.sh | $(brew --prefix)/bin/bash
+```
+
+(Sorry mac users; they use some array syntax in the script that isn't supported on the version of bash that ships with Mac.)
 
 Running random bash scripts generally isn't a good idea, but I'll stake my personal reputation on the fact that this link is safe. (It points to a specific SHA-1 hash rather than https://raw.githubusercontent.com/shawwn/llama-dl/main/llama.sh so that it's still safe even in the event that my repo or account got compromised.)
 
