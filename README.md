@@ -44,6 +44,8 @@ Running random bash scripts generally isn't a good idea, but I'll stake my perso
 
 219G (235164838073 bytes) total. Here are the sizes of the individual files for reference:
 ```sh
+./tokenizer_checklist.chk  50
+./tokenizer.model          499723
 ./7B/checklist.chk         100
 ./7B/consolidated.00.pth   13476939516
 ./7B/params.json           101
@@ -67,8 +69,6 @@ Running random bash scripts generally isn't a good idea, but I'll stake my perso
 ./65B/consolidated.06.pth  16323959449
 ./65B/consolidated.07.pth  16323959449
 ./65B/params.json          101
-./tokenizer_checklist.chk  50
-./tokenizer.model          499723
 ---
 total                      235164838073
 ```
