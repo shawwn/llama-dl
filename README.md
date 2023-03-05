@@ -73,7 +73,7 @@ Signed with love,
 
 Shawn Presser
 
-twitter: [theshawwn](https://twitter.com/theshawwn)
+twitter: [@theshawwn](https://twitter.com/theshawwn)
 
 HN: [sillysaurusx](https://news.ycombinator.com/user?id=sillysaurusx)
 
