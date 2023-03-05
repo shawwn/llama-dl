@@ -85,7 +85,7 @@ cd ..
 webtorrent 'magnet:?xt=urn:btih:b8287ebfa04f879b048d4d4404108cf3e8014352&dn=LLaMA&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce'
 ```
 
-Webtorrent began seeding immediately, which means every file is identical to what you would've gotten via the torrent. So this is just a faster version of the torrent.
+[Webtorrent](https://github.com/webtorrent/webtorrent-cli) began seeding immediately, which means every file is identical to what you would've gotten via the torrent. So this is just a faster version of the torrent.
 
 <img width="310" alt="image" src="https://user-images.githubusercontent.com/59632/222940942-0051a645-b561-4f0b-878c-3d195354d526.png">
 
