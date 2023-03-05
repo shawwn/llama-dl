@@ -1,5 +1,7 @@
 # llama-dl
 
+[<img width="310" alt="image" src="https://user-images.githubusercontent.com/59632/222979421-290299aa-b34f-4f3a-97c7-23332fe12c36.png">](https://twitter.com/anitakirkovska/status/1632447982720131074)
+
 [HN discussion](https://news.ycombinator.com/item?id=35026902) | [Twitter announcement](https://twitter.com/theshawwn/status/1632238214529400832)
 
 **UPDATE (9:51 AM CST)**: HN user MacsHeadroom left a [valuable comment](https://news.ycombinator.com/item?id=35029766):
@@ -11,6 +13,8 @@
 > I think some early results are using bad repetition penalty and/or temperature settings. I had to set both fairly high to get the best results. (Some people are also incorrectly comparing it to chatGPT/ChatGPT API which is not a good comparison. But that's a different problem.)
 >
 > I've had it translate, write poems, tell jokes, banter, write executable code. It does it all-- and all on a single card.
+
+**Update (12:52 PM CST)**: [@anitakirkovska](https://twitter.com/anitakirkovska) let us use their fabulous llama photo. If you happen to like the new header image as much as I do, be sure to check out their [AI newsletter](https://www.theprompt.io/) and their [tweets about us](https://twitter.com/anitakirkovska/status/1632447982720131074).
 
 ---
 
