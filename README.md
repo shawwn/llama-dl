@@ -44,34 +44,33 @@ Running random bash scripts generally isn't a good idea, but I'll stake my perso
 
 219G (235164838073 bytes) total. Here are the sizes of the individual files for reference:
 ```sh
-50      ./tokenizer_checklist.chk
-499723  ./tokenizer.model
-101     ./65B/params.json
-478     ./65B/checklist.chk
-16323959449     ./65B/consolidated.07.pth
-16323959449     ./65B/consolidated.03.pth
-16323959449     ./65B/consolidated.01.pth
-16323959449     ./65B/consolidated.05.pth
-16323959449     ./65B/consolidated.02.pth
-16323959449     ./65B/consolidated.06.pth
-16323959449     ./65B/consolidated.04.pth
-16323959449     ./65B/consolidated.00.pth
-101     ./13B/params.json
-154     ./13B/checklist.chk
-13016334699     ./13B/consolidated.01.pth
-13016334699     ./13B/consolidated.00.pth
-101     ./30B/params.json
-262     ./30B/checklist.chk
-16265763099     ./30B/consolidated.03.pth
-16265763099     ./30B/consolidated.01.pth
-16265763099     ./30B/consolidated.02.pth
-16265763099     ./30B/consolidated.00.pth
-101     ./7B/params.json
-100     ./7B/checklist.chk
-13476939516     ./7B/consolidated.00.pth
-
-total:
-235164838073
+./7B/checklist.chk         100
+./7B/consolidated.00.pth   13476939516
+./7B/params.json           101
+./13B/checklist.chk        154
+./13B/consolidated.00.pth  13016334699
+./13B/consolidated.01.pth  13016334699
+./13B/params.json          101
+./30B/checklist.chk        262
+./30B/consolidated.00.pth  16265763099
+./30B/consolidated.01.pth  16265763099
+./30B/consolidated.02.pth  16265763099
+./30B/consolidated.03.pth  16265763099
+./30B/params.json          101
+./65B/checklist.chk        478
+./65B/consolidated.00.pth  16323959449
+./65B/consolidated.01.pth  16323959449
+./65B/consolidated.02.pth  16323959449
+./65B/consolidated.03.pth  16323959449
+./65B/consolidated.04.pth  16323959449
+./65B/consolidated.05.pth  16323959449
+./65B/consolidated.06.pth  16323959449
+./65B/consolidated.07.pth  16323959449
+./65B/params.json          101
+./tokenizer_checklist.chk  50
+./tokenizer.model          499723
+---
+total                      235164838073
 ```
 
 ## How do I know this is safe?
