@@ -63,7 +63,7 @@ Word on Twitter is that LLaMA's samples seem worse than GPT-3 by a large margin,
 
 Even if it's GPT-3 level, the fact is, LLaMA is already openly available. The torrent isn't going anywhere. So my own thoughts on this are mostly irrelevant; determined hackers can get it themselves anyway.
 
-But for what it's worth, my personal opinion is that LLaMA probably isn't OpenAI-grade -- there's a big difference between training a model in an academic setting vs when your entire company depends on it for wide-scale commercial success. I wasn't impressed that 35B didn't seem to know who Captain Picard was.
+But for what it's worth, my personal opinion is that LLaMA probably isn't OpenAI-grade -- there's a big difference between training a model in an academic setting vs when your entire company depends on it for wide-scale commercial success. I wasn't impressed that 30B didn't seem to know who Captain Picard was.
 
 People have already started decrying this leak as dangerous. But everyone used to say the same thing about 1.5B. (In fact, the allure of 1.5B's grandiose claims was what drove me to take ML seriously in 2019.) Turns out, four years later, no one really cares about 1.5B anymore, and it certainly didn't cause wide-scale societal harm. I doubt LLaMA will either.
 
