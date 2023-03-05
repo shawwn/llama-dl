@@ -2,6 +2,8 @@
 
 **UPDATE (2:43 AM CST)**: Facebook has closed off this download vector. I'm currently mirroring the model to Cloudflare R2, and I'll update the script to use it right now; I'll keep you updated as I go. Check back in like... an hour?
 
+**UPDATE (3:58 AM CST)**: I've mirrored everything to R2, and updated the script to point to it. Note that the download command has changed (it uses a new version of the bash script) so you'll need to re-copy from this README. The safety guarantees are the same for you in the end, though. Read on.
+
 This repository contains a high-speed download of LLaMA, Facebook's 65B parameter model that was recently made available via torrent. (Discussion: [Facebook LLAMA is being openly distributed via torrents](https://news.ycombinator.com/item?id=35007978))
 
 It downloads all model weights (7B, 13B, 30B, 65B) at around 200 MB/s:
@@ -20,7 +22,7 @@ sys     2m30.847s
 To download all model weights, `cd` into the directory you want them, then run this:
 
 ```sh
-curl -o- https://raw.githubusercontent.com/shawwn/llama-dl/b093f5e3ad85a6437f40c4b20641e11f6955521d/llama.sh | bash
+curl -o- https://raw.githubusercontent.com/shawwn/llama-dl/56f50b96072f42fb2520b1ad5a1d6ef30351f23c/llama.sh | bash
 ```
 
 Running random bash scripts generally isn't a good idea, but I'll stake my personal reputation on the fact that this link is safe. (It points to a specific SHA-1 hash rather than https://raw.githubusercontent.com/shawwn/llama-dl/main/llama.sh so that it's still safe even in the event that my repo or account got compromised.)
@@ -32,7 +34,7 @@ I ran this:
 ```
 mkdir LLaMA
 cd LLaMA
-time curl -o- https://raw.githubusercontent.com/shawwn/llama-dl/b093f5e3ad85a6437f40c4b20641e11f6955521d/llama.sh | bash
+time curl -o- https://raw.githubusercontent.com/shawwn/llama-dl/56f50b96072f42fb2520b1ad5a1d6ef30351f23c/llama.sh | bash
 cd ..
 webtorrent 'magnet:?xt=urn:btih:b8287ebfa04f879b048d4d4404108cf3e8014352&dn=LLaMA&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce'
 ```
