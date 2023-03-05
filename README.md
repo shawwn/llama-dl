@@ -2,10 +2,6 @@
 
 [HN discussion](https://news.ycombinator.com/item?id=35026902) | [Twitter announcement](https://twitter.com/theshawwn/status/1632238214529400832)
 
-**UPDATE (2:43 AM CST)**: Facebook has closed off this download vector. I'm currently mirroring the model to Cloudflare R2, and I'll update the script to use it right now; I'll keep you updated as I go. Check back in like... an hour?
-
-**UPDATE (3:58 AM CST)**: I've mirrored everything to R2, and updated the script to point to it. Note that the download command has changed (it uses a new version of the bash script) so you'll need to re-copy from this README. The safety guarantees are the same for you in the end, though, and the bandwidth is still around 36MB/s, which isn't too bad. I'm honestly too tired to update the rest of the README to reflect this slowdown; I'll just leave it the way it was for tonight. Please tweet on the [announcement thread](https://twitter.com/theshawwn/status/1632238214529400832) if anything breaks again, and I'll fix it again. </passes out>
-
 **UPDATE (9:51 AM CST)**: HN user MacsHeadroom left a [valuable comment](https://news.ycombinator.com/item?id=35029766):
 
 > I'm running LLaMA-65B on a single A100 80GB with 8bit quantization. $1.5/hr on vast.ai
@@ -20,16 +16,24 @@
 
 This repository contains a high-speed download of LLaMA, Facebook's 65B parameter model that was recently made available via torrent. (Discussion: [Facebook LLAMA is being openly distributed via torrents](https://news.ycombinator.com/item?id=35007978))
 
-It downloads all model weights (7B, 13B, 30B, 65B) at around 200 MB/s:
+It downloads all model weights (7B, 13B, 30B, 65B) in less than two hours on a Chicago Ubuntu server.
+
+```
+real    98m12.980s
+user    8m8.916s
+sys     5m7.259s
+```
+This works out to an average of 40MB/s (235164838073 bytes in 5892 seconds).
+
+Personally, I just wanted to `curl` the weights instead of dealing with a torrent. The fact that it's several times faster was just a nice bonus.
+
+Here's a funny screenshot from when this repo first went live. I guess I'll keep it here. The script was originally using the leaker's own private download link that Facebook emailed them, which turned out to download at up to 220MB/s:
 
 ![image](https://user-images.githubusercontent.com/59632/222940196-e763d8a0-2282-4f78-8bbe-14c559eea90f.png)
 
+I was surprised, to say the least.
 
-```
-real    19m21.173s
-user    3m30.473s
-sys     2m30.847s
-```
+Once Facebook figured out what we were up to and shut it off, I mirrored everything to Cloudflare R2. This turned out to be fast, reliable, and almost free. (No egress fees.)
 
 ## Download
 
@@ -103,17 +107,21 @@ webtorrent 'magnet:?xt=urn:btih:b8287ebfa04f879b048d4d4404108cf3e8014352&dn=LLaM
 
 <img width="310" alt="image" src="https://user-images.githubusercontent.com/59632/222941107-b4ef0b21-3fa7-40d1-ae56-cbe385e6ac00.png">
 
-## How much faster?
+## How much faster? (Updated)
 
-Roughly 18x. As of March 4 2023, the torrent seems to download at around 11MB/s. Whereas this download script downloads at around 120MB/s on average, bursting occasionally up to 220MB/s.
+Roughly 3.6x. As of March 4 2023, the torrent seems to download at around 11MB/s, which implies a download time of around 6 hours. (Help seed it, if you can.)
 
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/59632/222940992-f037b12c-c077-4136-8960-b2b1667ddc79.png">
 
 ## Will I get in trouble for using this download link?
 
-I doubt it. This is the download link that was leaked in the original torrent. (i.e. the leaker accidentally leaked their own unique download link that Facebook sent them.)
+I doubt it. This is using the download link that was leaked in the original torrent. (i.e. the leaker accidentally leaked their own unique download link that Facebook sent them.)
 
 Technically, it may be illegal to knowingly use a private download link that was intended for someone else. Realistically, Facebook would risk their ML reputation by going after people who are merely trying to use what they themselves advertise as "open source."
+
+**Update**: Facebook shut off the link a couple hours after this repo went live. I mirrored everything to R2 and updated the script to point to that instead.
+
+Note that LLaMA was released under a ["non-commercial bespoke license"](https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md). Interestingly, Nvidia had a similar arrangement for StyleGAN, but that didn't stop Artbreeder from using it anyway. Nvidia never seemed to care enough to go after them. But if you [launch your own OpenAI API](https://github.com/shawwn/openai-server) and start charging money, don't be surprised when Facebook's lawyers come knocking.
 
 ## Final thoughts
 
