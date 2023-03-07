@@ -4,7 +4,13 @@
 
 [HN discussion](https://news.ycombinator.com/item?id=35026902) | [Twitter announcement](https://twitter.com/theshawwn/status/1632238214529400832)
 
-**UPDATE (9:51 AM CST)**: HN user MacsHeadroom left a [valuable comment](https://news.ycombinator.com/item?id=35029766):
+## News
+
+**Update (March 7, 3:35 PM CST)**: Looking to inference from the model? See https://github.com/shawwn/llama-dl/issues/1#issuecomment-1458870564 to use the improved sampler. (Facebook's sampler was using poor defaults, so no one was able to get anything good out of the model till now.)
+
+**Update (March 5, 12:52 PM CST)**: [@anitakirkovska](https://twitter.com/anitakirkovska) let us use their fabulous llama photo. If you happen to like the new header image as much as I do, be sure to check out their [AI newsletter](https://www.theprompt.io/) and their [tweets about us](https://twitter.com/anitakirkovska/status/1632447982720131074).
+
+**Update (March 5, 9:51 AM CST)**: HN user MacsHeadroom left a [valuable comment](https://news.ycombinator.com/item?id=35029766):
 
 > I'm running LLaMA-65B on a single A100 80GB with 8bit quantization. $1.5/hr on vast.ai
 >
@@ -14,9 +20,8 @@
 >
 > I've had it translate, write poems, tell jokes, banter, write executable code. It does it all-- and all on a single card.
 
-**Update (12:52 PM CST)**: [@anitakirkovska](https://twitter.com/anitakirkovska) let us use their fabulous llama photo. If you happen to like the new header image as much as I do, be sure to check out their [AI newsletter](https://www.theprompt.io/) and their [tweets about us](https://twitter.com/anitakirkovska/status/1632447982720131074).
 
----
+## Intro
 
 This repository contains a high-speed download of LLaMA, Facebook's 65B parameter model that was recently made available via torrent. (Discussion: [Facebook LLAMA is being openly distributed via torrents](https://news.ycombinator.com/item?id=35007978))
 
