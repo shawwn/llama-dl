@@ -25,7 +25,7 @@
 
 This repository contains a high-speed download of LLaMA, Facebook's 65B parameter model that was recently made available via torrent. (Discussion: [Facebook LLAMA is being openly distributed via torrents](https://news.ycombinator.com/item?id=35007978))
 
-It downloads all model weights (7B, 13B, 30B, 65B) in less than two hours on a Chicago Ubuntu server.
+It downloads all model weights (7B, 13B, 30B, 65B) in less than two hours, on a Chicago Ubuntu server.
 
 ```
 real    98m12.980s
