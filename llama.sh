@@ -30,7 +30,12 @@ do
     mkdir -p ${TARGET_FOLDER}"/${i}"
     for s in $(seq -f "0%g" 0 ${N_SHARD_DICT[$i]})
     do
-        wget ${PRESIGNED_URL/'*'/"${i}/consolidated.${s}.pth"} -O ${TARGET_FOLDER}"/${i}/consolidated.${s}.pth"
+        if [ -s ${TARGET_FOLDER}"/${i}/consolidated.${s}.pth" ]
+        then 
+            echo "Skipping  ${TARGET_FOLDER}/${i}/consolidated.${s}.pth"
+        else
+            wget ${PRESIGNED_URL/'*'/"${i}/consolidated.${s}.pth"} -O ${TARGET_FOLDER}"/${i}/consolidated.${s}.pth"
+        fi
     done
     wget ${PRESIGNED_URL/'*'/"${i}/params.json"} -O ${TARGET_FOLDER}"/${i}/params.json"
     wget ${PRESIGNED_URL/'*'/"${i}/checklist.chk"} -O ${TARGET_FOLDER}"/${i}/checklist.chk"
