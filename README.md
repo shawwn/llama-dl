@@ -89,9 +89,9 @@ Roughly 3.6x. As of March 4 2023, the torrent seems to download at around 11MB/s
 
 ## Will I get in trouble for using this download link?
 
-I doubt it. This is using the download link that was leaked in the original torrent. (i.e. the leaker accidentally leaked their own unique download link that Facebook sent them.)
+I doubt it. ~~This is using the download link that was leaked in the original torrent. (i.e. the leaker accidentally leaked their own unique download link that Facebook sent them.)~~
 
-Technically, it may be illegal to knowingly use a private download link that was intended for someone else. Realistically, Facebook would risk their ML reputation by going after people who are merely trying to use what they themselves advertise as "open source."
+~~Technically, it may be illegal to knowingly use a private download link that was intended for someone else. Realistically, Facebook would risk their ML reputation by going after people who are merely trying to use what they themselves advertise as "open source."~~
 
 **Update**: Facebook shut off the link a couple hours after this repo went live. I mirrored everything to R2 and updated the script to point to that instead.
 
